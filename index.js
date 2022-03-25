@@ -77,7 +77,7 @@ app.post("/api/persons", (req, res) => {
   const id = Math.floor(Math.random() * 999);
   const newPerson = { id, name: body.name, number: body.number };
   persons = persons.concat(newPerson);
-  res.json({ message: "person added" });
+  res.json(newPerson);
 });
 
 app.delete("/api/persons/:id", (req, res) => {
